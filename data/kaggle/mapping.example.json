@@ -1,0 +1,9 @@
+{
+  "text": "Text",
+  "platform": "Platform",
+  "created_at": "Timestamp",
+  "author": "User",
+  "hashtags": "Hashtags",
+  "likes": "Likes",
+  "shares": "Retweets"
+}

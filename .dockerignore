@@ -1,0 +1,59 @@
+# ============================================================
+# SocialScope .dockerignore
+# Build context is the project root (see docker-compose.yml).
+# The images only need: common/, backend/, frontend/ (source
+# + package files) and processing/Dockerfile. Everything else
+# is excluded to keep builds fast and secrets out of images.
+# The spark container gets the project via a volume mount at
+# runtime, so data/ and scripts/ are not needed in any image.
+# ============================================================
+
+# ---------- Version control & CI ----------
+.git
+.gitignore
+.gitattributes
+.github
+
+# ---------- Secrets ----------
+.env
+.env.*
+**/kaggle.json
+**/.kaggle
+*.pem
+*.key
+
+# ---------- Data, docs, scripts (not used in any image) ----------
+data
+docs
+scripts
+*.md
+
+# ---------- Dependencies & build output (rebuilt inside images) ----------
+**/node_modules
+frontend/dist
+frontend/.vite
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+.venv
+venv
+
+# ---------- Spark / Hadoop local runs ----------
+spark-warehouse
+metastore_db
+derby.log
+**/checkpoints
+
+# ---------- Logs, editors, OS ----------
+**/*.log
+.vscode
+.idea
+.claude
+**/.DS_Store
+**/Thumbs.db
+
+# ---------- Docker files themselves ----------
+docker-compose*.yml
+.dockerignore

@@ -1,0 +1,10 @@
+# Host-side tooling (ingestion + running Spark jobs locally). The Docker images pin their own copies.
+pandas<2.3
+numpy<2
+pyarrow==17.0.0
+pyspark==3.5.3
+vaderSentiment==3.3.2
+kafka-python==2.0.6
+pymongo==4.10.1
+elasticsearch==8.15.1
+neo4j==5.27.0

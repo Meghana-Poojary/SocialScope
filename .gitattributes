@@ -1,0 +1,12 @@
+# Normalise line endings so the project works on Windows, macOS and Linux.
+* text=auto
+
+# Shell scripts must keep LF or bash fails with "$'\r': command not found".
+*.sh text eol=lf
+# PowerShell scripts are fine with CRLF on Windows.
+*.ps1 text eol=crlf
+
+*.png binary
+*.jpg binary
+*.woff2 binary
+*.zip binary
